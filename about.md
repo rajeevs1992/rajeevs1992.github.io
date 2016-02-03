@@ -4,12 +4,20 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+A hardcore developer, who likes to spends more time with computers than with humans.
 
-You can find the source code for the Jekyll new theme at:
-{% include icon-github.html username="jglovier" %} /
-[jekyll-new](https://github.com/jglovier/jekyll-new)
+Career
+======
+I work for Get Real Health, Banglore, as a Software Engineer, since May 2014.
+I am a lead developer in the Get Real Health's latest product CHBase, and played 
+huge part in development of major modules in CHBase.
 
-You can find the source code for Jekyll at
-{% include icon-github.html username="jekyll" %} /
-[jekyll](https://github.com/jekyll/jekyll)
+Education
+=========
+I am a Bachelor of Technology graduate from Government Engineering College, Thrissur,
+majored in Computer Science, with a modest CGPA.
+
+My major achivements during my college days are
+
+- Google Summer of Code 2014
+- IBM Intern, under IBM Global Remote Mentoring program
