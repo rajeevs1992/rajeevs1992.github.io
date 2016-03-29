@@ -15,6 +15,7 @@ The workflow was decided to be as simple and basic as possible. Here is the summ
 
 ![Uber workflow](/img/uber/uber.png)
 
+
 Another very important design concern was that the site must use as little data as possible, as I usually use only 2G data and I wanted the site work great for me. I avoided JQuery and any CSS themes. I was able to come up with a site that loads with just **one request for every page**. This design desicion proved to be heavily advantageous in terms of data as well as loading times.
 
 After about a total of 20 hours, I was able to come up with a fully functional application for Uber. The last hurdle was that Uber requires the application endpoints to be either HTTPS or localhost. Luckily, heroku provides free HTTPS sites, so that too was solved.
@@ -26,17 +27,27 @@ Summarizing the features of my app:
 - Save co ordinates for commonly used places and book cab without GPS
 - Find the source from current location using GPS, or use saved locations
 - Get a stack trace by mail on crash (no uber app has that feature :-P)
+- Open source! Hosted on [github](https://github.com/rajeevs1992/uber-online).
 
-#A few screenshots
+A few screenshots
+-----------------
 
-#Login screen
+Login screen
+============
+
 ![Login](/img/uber/login.png)
 
-#Check for rides
+Check for rides
+===============
+
 ![Check for rides](/img/uber/book2.png)
 
-#Select ride
+Select ride
+===========
+
 ![Select ride](/img/uber/select.png)
 
-#Ride confirmation and status
+Ride confirmation and status
+============================
+
 ![Ride confirmation and status](/img/uber/status.png)
