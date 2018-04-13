@@ -1,0 +1,14 @@
+---
+layout: post
+title: A new form of programming
+date: '2011-03-22T21:50:00.000+05:30'
+author: Rajeev Sreedharan
+tags:
+- Linux
+- C/C++
+modified_time: '2013-01-22T20:21:18.886+05:30'
+blogger_id: tag:blogger.com,1999:blog-2447788814762842787.post-184310833952700327
+blogger_orig_url: http://myfossblog.blogspot.com/2011/03/new-form-of-programming.html
+---
+
+<div dir="ltr" style="text-align: left;" trbidi="on">While trying to solve one of the seemingly simple codes which my friend asked me to write, I ran into a totally unseen and different programming methodology.I am not sure whether this style is new or even patented by someone else...Any way I found it myself :-)<br /><br /><br />Well.....now about the code....<br />The question asked by my friend was to read a mathematical function in x and then assign value to the&nbsp;variable x.<br />The question looks seemingly simple,but I was fed up with the increasingly growing code...So i found a new way to solve it...I wrote statements in the code which will create another file with a perfectly executable C++ script ( iff &nbsp;the expression is in correct syntax ).Then the first code is compiled and run,resulting in creation of the new script,which is again compiled and run.This can be easily accomplished by using a simple shell script given below.....<br />Here comes the code.....<br /><br />1<a href="https://gist.github.com/4595171">.The C++ program</a><br />2.<a href="https://gist.github.com/4595182">The Shell Script to run the code</a><br />3.<a href="https://gist.github.com/4595188">The temporary C++ file created by the first code</a><br /><br />Warning:The above codes are meant for linux compiler....<br />Just copy the first two files into a single directory,change permissions of 2nd file using<br /><b>chmod 777 &lt;filename&gt;</b><br />Then execute it by using<br /><b>./&lt;filename&gt;</b></div>

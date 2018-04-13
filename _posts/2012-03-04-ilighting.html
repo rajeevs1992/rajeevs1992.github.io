@@ -1,0 +1,16 @@
+---
+layout: post
+title: iLighting
+date: '2012-03-04T00:50:00.000+05:30'
+author: Rajeev Sreedharan
+tags:
+- MSP430
+- C/C++
+- Electronics
+modified_time: '2013-01-22T20:10:05.922+05:30'
+thumbnail: http://1.bp.blogspot.com/-aWSWFl9R-fk/T1MGRpCIygI/AAAAAAAAAOQ/QKYWu-uMEAk/s72-c/Screenshot.png
+blogger_id: tag:blogger.com,1999:blog-2447788814762842787.post-2597318267299487497
+blogger_orig_url: http://myfossblog.blogspot.com/2012/03/ilighting.html
+---
+
+Long since I have posted something(Long since I have done something worth putting here).It is electronics(again) this time.<br /><br />As from the title,&nbsp;iLighting&nbsp;stands for Intelligent&nbsp;Lighting.Its an LED that adjusts its brightness with respect to the surrounding light.This is accomplished by using an MSP430 G2231&nbsp;micro controller&nbsp;and an <a href="http://en.wikipedia.org/wiki/LDR" target="_blank" title="Light Dependent Resistor">LDR</a>.Here is how the embedded code works.<br /><br />1.ADC measures drop across the LDR.<br /><blockquote style="color: #125692;">MSP430G2331 has a 10 bit ADC,which means it can give an output range of 0-1023.Here,since we are measuring the drop across a resistor(LDR),the maximum value ie 1023 will correspond to the maximum drop,ie minimum resistance,ie minimum light.</blockquote>2. The ADC output,which is an ordinary number,is compared to numbers corresponding to different voltages in an if-else ladder (refer <a href="http://pastebin.com/swgrbhCy" target="_blank">code</a> lines 42-73). <br /><br />3.On encountering the appropriate if statement,the pwm() function is invoked. <br /><blockquote style="color: #125692;"><a href="http://en.wikipedia.org/wiki/Pulse-width_modulation" target="_blank">PWM</a> or pulse width modulation is a technique that is used for the control of power delivered to a circuit or element by modifying the time it stays on or off.For eg,for making a dim lit LED, it is made to stay OFF for more time than it stays ON,say ON for 10 ms and OFF for 90 ms.</blockquote>4.The above processes continues over and over again.<br /><br /><br />Now the circuit.I show the MSP430 board as a mere 14 pin IC since i couldn't figure out a better way to show it.The PIN P1.5 is configured for output and P1.4 is configured for input.<br /><br /><div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-aWSWFl9R-fk/T1MGRpCIygI/AAAAAAAAAOQ/QKYWu-uMEAk/s1600/Screenshot.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="582" src="http://1.bp.blogspot.com/-aWSWFl9R-fk/T1MGRpCIygI/AAAAAAAAAOQ/QKYWu-uMEAk/s640/Screenshot.png" width="640" /></a></div><br />And now the code.Its written in C.Hosted in pastebin.<b><a href="https://gist.github.com/4595109" target="_blank">Click here for code.</a></b><br /><a href="http://recursive-labs.com/" target="_blank">Learn embedded systems online.</a>

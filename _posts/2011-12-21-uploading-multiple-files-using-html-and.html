@@ -1,0 +1,15 @@
+---
+layout: post
+title: Uploading multiple files using HTML and PHP
+date: '2011-12-21T22:04:00.000+05:30'
+author: Rajeev Sreedharan
+tags:
+- Projects
+- PHP
+- Web
+modified_time: '2013-01-22T19:57:39.327+05:30'
+blogger_id: tag:blogger.com,1999:blog-2447788814762842787.post-8631578896435088948
+blogger_orig_url: http://myfossblog.blogspot.com/2011/12/uploading-multiple-files-using-html-and.html
+---
+
+There occur circumstances when there is a need to upload full contents of a directory to a web server.It is always difficult to upload files one by one.  <br />The things that must be done:<br />1.Select multiple files:<br />&nbsp;&nbsp;&nbsp; This is accomplished by an extra word in html input tag<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b><i><span style="font-size: small;">&nbsp;</span><span style="color: black; font-size: small;"> </span><span style="color: cyan; font-size: small;">&lt;</span><span style="color: orange; font-size: small;">input</span><span style="font-size: small;"> </span><span style="color: #38761d; font-size: small;">type</span><span style="color: cyan; font-size: small;">=</span><span style="color: red; font-size: small;">'file' </span><span style="color: #38761d; font-size: small;">name</span><span style="color: cyan; font-size: small;">=</span><span style="color: #cc0000; font-size: small;">'file[ ]'</span><span style="font-size: small;"> </span><span style="color: #38761d; font-size: small;">multiple</span><span style="font-size: small;"><span style="color: cyan;">&gt;</span>&nbsp;</span></i></b><br />Now it is possible to select multiple files from the browse directories window.  Example for multiple file selection:<br /><br /><input multiple="" type="file" /> <br /><br />2.Upload these files to a destination using PHP:  <br />&nbsp;&nbsp; The PHP script that may be used to perform the upload:  <br /><br /><script src="https://gist.github.com/4595010.js"></script>

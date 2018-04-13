@@ -1,0 +1,13 @@
+---
+layout: post
+title: The "dangling if else" example
+date: '2011-12-19T22:12:00.000+05:30'
+author: Rajeev Sreedharan
+tags:
+- C/C++
+modified_time: '2011-12-19T22:36:06.355+05:30'
+blogger_id: tag:blogger.com,1999:blog-2447788814762842787.post-267103015392155644
+blogger_orig_url: http://myfossblog.blogspot.com/2011/12/dangling-if-else-example.html
+---
+
+For the first time I my programming experience I encountered the dangling if else in C.<br /><br />Question:<br /><br /><i>Read a number,If it is an Armstrong number,then generate primes upto that number.</i><br /><br />The solution which seems to be right but infected with the dangling if else is given below:<br /><br /><script src="https://gist.github.com/1497980.js">  </script><br /><br />The right solution is: (Just a couple of extra braces.) <br />The "else" belongs to the "if" right behind it,which causes the dangling if else problem when no braces are used.This problem is not found in languages like python as the indentation demarcates the blocks.<br /><br /><script src="https://gist.github.com/1497985.js">  </script>

@@ -1,0 +1,14 @@
+---
+layout: post
+title: Uninstall Ubuntu safely on a double OS computer-Windows 7 + Ubuntu 9.10
+date: '2011-07-07T21:56:00.000+05:30'
+author: Rajeev Sreedharan
+tags:
+- Linux
+- Ubuntu
+modified_time: '2011-12-24T23:12:37.234+05:30'
+blogger_id: tag:blogger.com,1999:blog-2447788814762842787.post-3656515984625660895
+blogger_orig_url: http://myfossblog.blogspot.com/2011/07/uninstall-linux-safely-on-double-os.html
+---
+
+It is a usual mistake done during the&nbsp;uninstall&nbsp;process of ubuntu that the hard disk partition that holds ubuntu is formatted through the windows disk manager utility.The result is really terrible if the GRUB was your default boot loader....You get nothing but a prompt saying grub rescue while you boot your system next time.What I used to do in this situation was to&nbsp;reinstall&nbsp;the GRUB by&nbsp;reinstalling&nbsp;ubuntu or boot a live CD and execute the command<b> "sudo update-grub"</b>,which is often a headache if you are in urgent need of disk space or in lack of time.The bigger problem is that you cannot use windows even.Here is simplest solution that I found for this on the net....<br /><br /><b>IMPORTANT:This steps can only be used to successfully uninstall Ubuntu from the system and free up disk space,not to replace GRUB by windows loader.Ubuntu cant be&nbsp;accessed&nbsp;after performing these steps.So backup files in Ubuntu.</b><br /><b><br /></b><br />1.Before formatting your ubuntu partition,reboot your system first<br />2.On selecting windows 7 OS from the GRUB(and windows loader maybe),press F8 key<br />3.Choose "repair your system"<br />4.Click "next" on the dialog box that&nbsp;appeared<br />5.Select command prompt from the next dialog box<br />6.On the command prompt screen,type <b>bootrec.exe/fixmbr</b><br /><b><br /></b><br />The command gets executed in a jiffy and says operation completed&nbsp;successfully.Now&nbsp;reboot&nbsp;system and you will find the windows loader loaded instead of GRUB.Boot windows and go on to format the ubuntu partition through the disk manager.<br />You will find that Ubuntu is shown at the boot menu,but you cant boot ubuntu from it.So backup files in ubuntu&nbsp;before&nbsp;you perform this :).

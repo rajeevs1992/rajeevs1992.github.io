@@ -1,0 +1,13 @@
+---
+layout: post
+title: Print a file with all words reversed
+date: '2011-12-22T14:16:00.000+05:30'
+author: Rajeev Sreedharan
+tags:
+- C/C++
+modified_time: '2013-01-22T20:12:25.091+05:30'
+blogger_id: tag:blogger.com,1999:blog-2447788814762842787.post-712849869208163462
+blogger_orig_url: http://myfossblog.blogspot.com/2011/12/print-file-with-all-words-reversed-and.html
+---
+
+How short can a "reverse words in a file" program be in C?<br />In python it can be accomplished in single line,but what about C?How about 8 lines?<br /><br />In Python: <span style="color: #073763;">for i in open("file").read().split(): print i[::-1];</span> <br /><br />C code to print a file with words reversed:<br /><script src="https://gist.github.com/4595049.js"></script>Who said a file can be opened only using FILE pointer?A FILE pointer is actually an void pointer.<br /><br /><i><u><b>A void pointer:</b></u></i> <br /><div style="font-family: Verdana,sans-serif;"><br /></div><div style="font-family: Verdana,sans-serif;"><span style="font-size: small;"><i>"A void pointer can point to any type of data"</i></span></div><div style="font-family: Verdana,sans-serif;"><br /></div>But,<br /><br /><span style="color: #e06666;">void</span> <span style="color: #6aa84f;">*</span>ptr=<span style="color: black;">8</span>;<br /><span style="color: #0b5394;">printf</span>("<span style="color: #073763;">%d</span>",*ptr);<br /><br /><br />is an error,as the "printf" statement tries to dereference a void pointer without cast,which is illegal.So the extraction operator " * " cant be used with a void pointer<b> without cast</b>.Also the size of a void pointer is 4 bytes like all the other pointer types.So the above program uses same amount of bytes if<span style="color: #38761d;"> FILE *fp; </span>had been used.<br /><br />An additional info:<br /><br /><span style="color: #e06666;">void</span> ptr=8<span style="color: white;"></span>; is also illegal.An ordinary variable can't be of type void.<br /><br /><i><u>Dereferencing a void pointer:</u></i><br /><br />A void pointer may be dereferenced by casting it into another datatype.Here is an example in C++:<br /><br /><script src="https://gist.github.com/4595126.js"></script>
