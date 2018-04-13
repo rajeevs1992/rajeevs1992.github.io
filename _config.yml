@@ -18,3 +18,4 @@ github_username:  rajeevs1992
 
 # Build settings
 markdown: kramdown
+theme: jekyll-theme-slate
